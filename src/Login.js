@@ -4,8 +4,6 @@ import { StyleSheet, Text, View, TextInput, ScrollView } from 'react-native';
 import ORDivider from "./ORDivider";
 import BasicButton from "./BasicButton";
 
-import LoginSignUpBtn from "./LoginSignUpBtn";
-
 export default function Login({navigation}) {
     const [email, setEmail] = useState("");
     const [password, setPassword] = useState("");
@@ -60,15 +58,8 @@ export default function Login({navigation}) {
                 onPress={handleLoginBtnClick}
             />
 
-            <Text style={styles.log}>{log}</Text>
-
-
-            <LoginSignUpBtn
-                customStyle={styles.signup}
-                text="Don’t have an account?"
-                btnText="Sign up"
-                onPress={handleSignUpBtnClick}
-            />
+          <ORDivider />
+                    
         </ScrollView>
     );
 }
